@@ -1,13 +1,12 @@
 package eu.tsys.control;
 
+import java.util.Timer;
+
+import lejos.nxt.SensorPort;
 import eu.tsys.display.Display;
 import eu.tsys.sensor.Sampler;
 import eu.tsys.sensor.Sampler.SampleReceiver;
 import eu.tsys.util.Vector;
-import lejos.nxt.SensorPort;
-import lejos.util.DebugMessages;
-
-import java.util.Timer;
 
 public class Leveler implements SampleReceiver
 {

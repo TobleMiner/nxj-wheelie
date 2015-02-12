@@ -7,8 +7,6 @@ import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 
-import lejos.nxt.ColorSensor.Color;
-import lejos.robotics.kinematics.PointUnreachableException;
 import eu.tsys.util.Vector;
 
 public class Display
@@ -55,9 +53,12 @@ public class Display
 			char[] charsZ = ("Z: " + Double.toString(vec.getZ())).toCharArray();
 			this.graphics.setColor(Graphics.BLACK);
 			this.graphics.setFont(Font.getDefaultFont());
-			this.graphics.drawChars(charsX, 0, charsX.length, 0, 0, 0);
-			this.graphics.drawChars(charsY, 0, charsY.length, 0, 20, 0);
-			this.graphics.drawChars(charsZ, 0, charsZ.length, 0, 40, 0);
+			this.graphics.drawChars(charsX, 0, charsX.length, this.indicatorStartpoint.x,
+					this.indicatorStartpoint.y, 0);
+			this.graphics.drawChars(charsY, 0, charsY.length, this.indicatorStartpoint.x,
+					this.indicatorStartpoint.y + 20, 0);
+			this.graphics.drawChars(charsZ, 0, charsZ.length, this.indicatorStartpoint.x,
+					this.indicatorStartpoint.y + 40, 0);
 		}
 		catch(Exception ex)
 		{
