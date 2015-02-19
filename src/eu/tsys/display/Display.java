@@ -45,25 +45,18 @@ public class Display
 	
 	public void updateRotationInfo(Vector vec)
 	{
-		try
-		{
-			this.fillRect(this.infoArea, Graphics.WHITE);
-			char[] charsX = ("X: " + Double.toString(vec.getX())).toCharArray();
-			char[] charsY = ("Y: " + Double.toString(vec.getY())).toCharArray();
-			char[] charsZ = ("Z: " + Double.toString(vec.getZ())).toCharArray();
-			this.graphics.setColor(Graphics.BLACK);
-			this.graphics.setFont(Font.getDefaultFont());
-			this.graphics.drawChars(charsX, 0, charsX.length, this.indicatorStartpoint.x,
-					this.indicatorStartpoint.y, 0);
-			this.graphics.drawChars(charsY, 0, charsY.length, this.indicatorStartpoint.x,
-					this.indicatorStartpoint.y + 20, 0);
-			this.graphics.drawChars(charsZ, 0, charsZ.length, this.indicatorStartpoint.x,
-					this.indicatorStartpoint.y + 40, 0);
-		}
-		catch(Exception ex)
-		{
-			
-		}
+		this.fillRect(this.infoArea, Graphics.WHITE);
+		char[] charsX = ("X: " + Double.toString(vec.getX())).toCharArray();
+		char[] charsY = ("Y: " + Double.toString(vec.getY())).toCharArray();
+		char[] charsZ = ("Z: " + Double.toString(vec.getZ())).toCharArray();
+		this.graphics.setColor(Graphics.BLACK);
+		this.graphics.setFont(Font.getDefaultFont());
+		this.graphics.drawChars(charsX, 0, charsX.length, this.indicatorStartpoint.x,
+				this.indicatorStartpoint.y, 0);
+		this.graphics.drawChars(charsY, 0, charsY.length, this.indicatorStartpoint.x,
+				this.indicatorStartpoint.y + 20, 0);
+		this.graphics.drawChars(charsZ, 0, charsZ.length, this.indicatorStartpoint.x,
+				this.indicatorStartpoint.y + 40, 0);
 	}
 	
 	public void updateIndicator(Vector vec)
